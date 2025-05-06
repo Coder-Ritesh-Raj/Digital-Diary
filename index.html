@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class IX 'A' Digital Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1><b><u>Class IX<sup>th</sup> 'A' Digital Diary</u></b></h1>
+
+    <div class="date-day-select">
+        <div>
+            <label for="dateTop"><b>Date:</b></label><br>
+            <input type="date" id="dateTop">
+        </div>
+
+        <div id="clock" class="live-clock"></div>
+
+        <div>
+            <label for="dayTop"><b>Day:</b></label><br>
+            <select id="dayTop">
+                <option value="" disabled selected>Select the day</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Period No.</th>
+                <th>Subject</th>
+                <th>Topics</th>
+                <th>ClassWork (C.W.)</th>
+                <th>HomeWork (H.W.)</th>
+            </tr>
+        </thead>
+        <tbody id="diary-body">
+            <!-- Period rows will be inserted by JS -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
