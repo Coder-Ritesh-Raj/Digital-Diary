@@ -81,3 +81,44 @@ updateClock();
 
 window.addEventListener("beforeunload", saveData);
 window.addEventListener("DOMContentLoaded", loadPreviousData);
+
+const texts = [
+    "Class IX\u1d57ʰ 'A' Digital Diary",
+    "Class Teacher: Mr. R.S. Rathore"
+];
+
+let part = 0;
+let i = 0;
+let isDeleting = false;
+let speed = 100;
+
+const typedText = document.getElementById("typed-text");
+
+function typeEffect() {
+    const currentText = texts[part];
+
+    if (isDeleting) {
+        typedText.textContent = currentText.substring(0, i--);
+    } else {
+        typedText.textContent = currentText.substring(0, i++);
+    }
+
+    if (!isDeleting && i === currentText.length + 1) {
+        isDeleting = true;
+        speed = 50;
+        setTimeout(typeEffect, 1000);
+        return;
+    }
+
+    if (isDeleting && i === 0) {
+        isDeleting = false;
+        part = (part + 1) % texts.length;
+        speed = 100;
+        setTimeout(typeEffect, 500);
+        return;
+    }
+
+    setTimeout(typeEffect, speed);
+}
+
+typeEffect();
