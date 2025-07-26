@@ -122,3 +122,23 @@ function typeEffect() {
 }
 
 typeEffect();
+
+
+document.getElementById("dateTop").addEventListener("change", function () {
+    const date = new Date(this.value);
+    if (!isNaN(date)) {
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const dayName = days[date.getDay()];
+        document.getElementById("dayTop").value = dayName;
+    }
+});
+
+document.getElementById("dateTop").addEventListener("change", function () {
+    const date = new Date(this.value);
+    if (!isNaN(date)) {
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const dayName = days[date.getDay()];
+        document.getElementById("dayTop").value = dayName;
+    }
+});
+

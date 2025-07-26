@@ -86,7 +86,7 @@ textarea {
     resize: none;
     overflow: hidden;
     word-wrap: break-word;
-    border-radius: 10px;
+    border-radius: 1ax;
 }
 
 tr:nth-child(even) {
@@ -118,4 +118,18 @@ tr:hover {
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+/* Main diary container hover effect */
+.main-diary-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.main-diary-box:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 10px orange,
+        0 0 20px orange,
+        0 0 30px orange;
 }
